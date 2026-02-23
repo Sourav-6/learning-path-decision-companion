@@ -1,0 +1,68 @@
+[
+    {
+        "name": "HP Pavilion 15",
+        "brand": "HP",
+        "price": 58999,
+        "ram": 16,
+        "storage": 512,
+        "cpu_score": 8.2,
+        "battery": 7.5,
+        "weight": 1.75,
+        "brand_score": 8
+    },
+    {
+        "name": "Dell Inspiron 15 3520",
+        "brand": "Dell",
+        "price": 54990,
+        "ram": 8,
+        "storage": 512,
+        "cpu_score": 7.5,
+        "battery": 7.0,
+        "weight": 1.83,
+        "brand_score": 8
+    },
+    {
+        "name": "Lenovo IdeaPad Gaming 3",
+        "brand": "Lenovo",
+        "price": 64999,
+        "ram": 16,
+        "storage": 512,
+        "cpu_score": 8.8,
+        "battery": 6.5,
+        "weight": 2.25,
+        "brand_score": 8
+    },
+    {
+        "name": "ASUS VivoBook 15",
+        "brand": "ASUS",
+        "price": 52999,
+        "ram": 8,
+        "storage": 512,
+        "cpu_score": 7.2,
+        "battery": 7.8,
+        "weight": 1.7,
+        "brand_score": 7
+    },
+    {
+        "name": "Acer Aspire 7",
+        "brand": "Acer",
+        "price": 59999,
+        "ram": 16,
+        "storage": 512,
+        "cpu_score": 8.5,
+        "battery": 6.8,
+        "weight": 2.15,
+        "brand_score": 7
+    },
+    {
+        "name": "Apple MacBook Air M1",
+        "brand": "Apple",
+        "price": 79990,
+        "ram": 8,
+        "storage": 256,
+        "cpu_score": 9.2,
+        "battery": 9.5,
+        "weight": 1.29,
+        "brand_score": 9
+    }
+]
