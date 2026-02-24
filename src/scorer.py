@@ -1,33 +1,29 @@
-def calculate_score(laptop, weights):
+def calculate_score(path, weights, profile):
 
-    performance = laptop.cpu_score * weights["performance"]
-    battery = laptop.battery * weights["battery"]
-    portability = (10 - laptop.weight) * weights["portability"]
-    brand = laptop.brand_score * weights["brand"]
-    ram = laptop.ram / 2 * weights["ram"]
+    # Normalize duration (shorter is better)
+    time_score = max(0, 25 - path["duration_weeks"])
 
-    total = (
-        performance +
-        battery +
-        portability +
-        brand +
-        ram
+    difficulty_match = max(
+        0,
+        5 - abs(path["difficulty"] - profile["level"])
     )
 
-    return total
+    score = (
+        path["job_demand"] * weights["demand"] +
+        path["roi"] * weights["roi"] +
+        time_score * weights["time"] +
+        difficulty_match * weights["difficulty"] +
+        path["resources"] * weights["resources"]
+    )
+
+    return score
 
 
-def rank_laptops(laptops, budget, weights):
+def rank_paths(paths, weights, profile):
 
-    valid = []
+    for p in paths:
+        p["score"] = calculate_score(p, weights, profile)
 
-    for laptop in laptops:
-        if laptop.price <= budget:
-            valid.append(laptop)
+    paths.sort(key=lambda x: x["score"], reverse=True)
 
-    for laptop in valid:
-        laptop.score = calculate_score(laptop, weights)
-
-    valid.sort(key=lambda x: x.score, reverse=True)
-
-    return valid
+    return paths

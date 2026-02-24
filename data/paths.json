@@ -1,0 +1,42 @@
+[
+    {
+        "id": "P1",
+        "name": "Backend Developer",
+        "difficulty": 3,
+        "duration_weeks": 14,
+        "job_demand": 5,
+        "roi": 5,
+        "resources": 5,
+        "description": "Focuses on server-side development using Python, databases, and APIs."
+    },
+    {
+        "id": "P2",
+        "name": "Fullstack Developer",
+        "difficulty": 4,
+        "duration_weeks": 18,
+        "job_demand": 5,
+        "roi": 5,
+        "resources": 4,
+        "description": "Covers frontend and backend development using modern frameworks."
+    },
+    {
+        "id": "P3",
+        "name": "Data Scientist",
+        "difficulty": 4,
+        "duration_weeks": 20,
+        "job_demand": 4,
+        "roi": 4,
+        "resources": 4,
+        "description": "Focuses on data analysis, machine learning, and statistics."
+    },
+    {
+        "id": "P4",
+        "name": "Machine Learning Engineer",
+        "difficulty": 5,
+        "duration_weeks": 24,
+        "job_demand": 4,
+        "roi": 5,
+        "resources": 3,
+        "description": "Specializes in building and deploying ML models."
+    }
+]

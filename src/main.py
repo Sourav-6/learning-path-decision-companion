@@ -1,47 +1,61 @@
-from data_loader import load_laptops
-from scorer import rank_laptops
+from loader import load_paths
+from scorer import rank_paths
+from explainer import explain
+
+
+def get_profile():
+
+    print("\n--- Your Profile ---")
+
+    level = int(input("Your level (1=Beginner, 5=Advanced): "))
+    hours = int(input("Weekly study hours: "))
+    deadline = int(input("Target deadline (months): "))
+
+    return {
+        "level": level,
+        "hours": hours,
+        "deadline": deadline
+    }
 
 
 def get_weights():
 
-    print("\nRate importance (1 = Low, 5 = High)\n")
+    print("\n--- Set Priorities (1=Low, 5=High) ---")
 
-    weights = {}
-
-    weights["performance"] = int(input("Performance: "))
-    weights["battery"] = int(input("Battery: "))
-    weights["portability"] = int(input("Portability: "))
-    weights["brand"] = int(input("Brand: "))
-    weights["ram"] = int(input("RAM: "))
-
-    return weights
+    return {
+        "demand": int(input("Job Demand: ")),
+        "roi": int(input("Career ROI: ")),
+        "time": int(input("Fast Completion: ")),
+        "difficulty": int(input("Difficulty Match: ")),
+        "resources": int(input("Learning Resources: "))
+    }
 
 
 def main():
 
-    print("==== Laptop Decision Companion System ====\n")
+    print("==== Learning Path Decision Companion ====")
 
-    laptops = load_laptops()
-
-    budget = int(input("Enter your budget (₹): "))
-
+    profile = get_profile()
     weights = get_weights()
 
-    results = rank_laptops(laptops, budget, weights)
+    paths = load_paths()
 
-    if not results:
-        print("\n❌ No laptops found under your budget.")
-        return
+    ranked = rank_paths(paths, weights, profile)
 
-    print("\n📊 Recommended Laptops:\n")
+    print("\n--- Recommended Paths ---\n")
 
-    for i, l in enumerate(results, 1):
+    for i, p in enumerate(ranked, 1):
 
-        print(f"{i}. {l.name}")
-        print(f"   Brand: {l.brand}")
-        print(f"   Price: ₹{l.price}")
-        print(f"   RAM: {l.ram} GB | Storage: {l.storage} GB")
-        print(f"   Score: {l.score:.2f}\n")
+        print(f"{i}. {p['name']} (Score: {p['score']:.2f})")
+        print(f"   {p['description']}")
+
+        reasons = explain(p, profile)
+
+        print("   Why:")
+        for r in reasons:
+            print(f"    - {r}")
+
+        print()
 
 
 if __name__ == "__main__":
