@@ -7,7 +7,7 @@
         "job_demand": 5,
         "roi": 5,
         "resources": 5,
-        "description": "Focuses on server-side development using Python, databases, and APIs."
+        "description": "Server-side development with Python, databases, and APIs."
     },
     {
         "id": "P2",
@@ -17,7 +17,7 @@
         "job_demand": 5,
         "roi": 5,
         "resources": 4,
-        "description": "Covers frontend and backend development using modern frameworks."
+        "description": "Frontend and backend using modern frameworks."
     },
     {
         "id": "P3",
@@ -27,16 +27,56 @@
         "job_demand": 4,
         "roi": 4,
         "resources": 4,
-        "description": "Focuses on data analysis, machine learning, and statistics."
+        "description": "Data analysis, ML, and statistics."
     },
     {
         "id": "P4",
-        "name": "Machine Learning Engineer",
+        "name": "ML Engineer",
         "difficulty": 5,
         "duration_weeks": 24,
         "job_demand": 4,
         "roi": 5,
         "resources": 3,
-        "description": "Specializes in building and deploying ML models."
+        "description": "Building and deploying ML systems."
+    },
+    {
+        "id": "P5",
+        "name": "DevOps Engineer",
+        "difficulty": 4,
+        "duration_weeks": 16,
+        "job_demand": 5,
+        "roi": 5,
+        "resources": 3,
+        "description": "CI/CD, cloud, automation, monitoring."
+    },
+    {
+        "id": "P6",
+        "name": "Mobile App Developer",
+        "difficulty": 3,
+        "duration_weeks": 14,
+        "job_demand": 4,
+        "roi": 4,
+        "resources": 4,
+        "description": "Android/iOS app development."
+    },
+    {
+        "id": "P7",
+        "name": "Cloud Engineer",
+        "difficulty": 4,
+        "duration_weeks": 18,
+        "job_demand": 5,
+        "roi": 5,
+        "resources": 3,
+        "description": "AWS, Azure, GCP infrastructure."
+    },
+    {
+        "id": "P8",
+        "name": "Cybersecurity Analyst",
+        "difficulty": 4,
+        "duration_weeks": 20,
+        "job_demand": 4,
+        "roi": 4,
+        "resources": 3,
+        "description": "Security monitoring and defense."
     }
 ]
