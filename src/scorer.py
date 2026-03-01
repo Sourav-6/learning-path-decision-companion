@@ -18,12 +18,10 @@ def calculate_score(path, weights, profile):
 
     return score
 
-
 def rank_paths(paths, weights, profile):
 
     for p in paths:
         p["score"] = calculate_score(p, weights, profile)
 
     paths.sort(key=lambda x: x["score"], reverse=True)
-
     return paths
