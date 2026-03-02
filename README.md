@@ -1,10 +1,12 @@
 #  Learning Path Decision Companion
 
+At a certain point in my learning journey, I realized I was unsure what to learn next. There were too many options, conflicting advice, and unclear priorities. That uncertainty inspired me to build a structured decision system.<br>
+
 A structured **Decision Companion System** that helps users choose the
 most suitable technical learning path based on their goals, constraints,
 and priorities.
 
-At a certain point in my learning journey, I realized I was unsure what to learn next. There were too many options, conflicting advice, and unclear priorities. That uncertainty inspired me to build a structured decision system.<br>
+
 
 This system evaluates multiple options against weighted criteria and
 provides a ranked, explainable recommendation.
