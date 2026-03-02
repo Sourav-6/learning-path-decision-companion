@@ -34,13 +34,13 @@ Instead of using the provided examples, this project solves:
 
 Help users decide between learning paths such as:
 
--   Backend Developer\
--   Fullstack Developer\
--   Data Scientist\
--   ML Engineer\
--   DevOps Engineer\
--   Mobile App Developer\
--   Cloud Engineer\
+-   Backend Developer<br>
+-   Fullstack Developer<br>
+-   Data Scientist<br>
+-   ML Engineer<br>
+-   DevOps Engineer<br>
+-   Mobile App Developer<br>
+-   Cloud Engineer<br>
 -   Cybersecurity Analyst
 
 Based on:
